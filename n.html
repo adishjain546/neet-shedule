@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NEET 2026 Prep Schedule</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://cdn.pixabay.com/photo/2017/08/06/01/41/stethoscope-2586786_1280.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(5px);
+      padding: 30px;
+      color: #333;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.88);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 950px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    h1, h2 {
+      color: #004d66;
+      text-align: center;
+      text-shadow: 1px 1px 2px #bbb;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #cccccc;
+      padding: 12px;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    th {
+      background-color: #00bcd4;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .done {
+      color: green;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    button {
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin-top: 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>NEET 2026 Prep Page</h1>
+    <h2>📅 Daily Schedule (Check Off When Done)</h2>
+
+    <table>
+      <tr><th>Time</th><th>Activity</th><th>Status</th></tr>
+      <tr>
+        <td>5:30 – 6:00 AM</td>
+        <td>Wake up, freshen up, meditation</td>
+        <td><input type="checkbox" onclick="markDone(this)"><span></span></td>
+      </tr>
+      <tr>
+        <td>6:00 – 7:30 AM</td>
+        <td>Biology – NCERT Reading</td>
+        <td><input type="checkbox" onclick="markDone(this)"><span></span></td>
+      </tr>
+      <tr>
+        <td>8:00 – 9:00 AM</td>
+        <td>Chemistry – Theory + Examples</td>
+        <td><input type="checkbox" onclick="markDone(this)"><span></span></td>
+      </tr>
+      <tr>
+        <td>10:00 – 11:30 AM</td>
+        <td>Physics – Concepts + Numericals</td>
+        <td><input type="checkbox" onclick="markDone(this)"><span></span></td>
+      </tr>
+      <tr>
+        <td>2:00 – 3:30 PM</td>
+        <td>MCQ Practice – All Subjects</td>
+        <td><input type="checkbox" onclick="markDone(this)"><span></span></td>
+      </tr>
+      <tr>
+        <td>6:00 – 7:30 PM</td>
+        <td>Mock Test / OMR Practice</td>
+        <td><input type="checkbox" onclick="markDone(this)"><span></span></td>
+      </tr>
+      <tr>
+        <td>8:15 – 10:00 PM</td>
+        <td>Error Review + Concept Revision</td>
+        <td><input type="checkbox" onclick="markDone(this)"><span></span></td>
+      </tr>
+    </table>
+
+    <button onclick="alert('✅ Stay consistent and you’ll crush NEET 2026!')">
+      Motivate Me!
+    </button>
+  </div>
+
+  <script>
+    function markDone(checkbox) {
+      const span = checkbox.nextElementSibling;
+      if (checkbox.checked) {
+        span.textContent = " ✅ Done!";
+        span.classList.add("done");
+      } else {
+        span.textContent = "";
+        span.classList.remove("done");
+      }
+    }
+  </script>
+</body>
+</html>
